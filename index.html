@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #21b2a6;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  /* color: #818181; */
+  color: white;
+  display: block;
+  transition: 0.3s;
+  text-transform: uppercase;  
+  border-bottom: solid .1px #33333373;
+  /* margin: 0 40%; */
+  width: 200px;
+  letter-spacing: 5px;
+  line-height: 25px;
+  font-size: 13px;
+}
+
+.sidenav a:hover{
+  color: #c9c9c9;
+  cursor: pointer;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  font-weight: lighter;
+  color: white;
+}
+
+.closebtn:hover{
+  cursor: pointer;
+}
+
+.navbar__main__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e3842;
+    padding: 0;
+    margin: 0;
+    height: 50px;
+}
+
+.navbar__main__container__p{
+    color: #f1f1f1;
+    padding: 1rem;
+    font-size: 16px;
+}
+
+.navbar__main__container__inner__div{
+    height: 100%;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 1em;
+}
+.navbar__main__container__inner__div:hover{
+  cursor: pointer;
+}
+
+.navbar__main__container__menu{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 3px;
+}
+
+.navbar__main__container__menu__icon{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 15px;
+}
+
+@media screen and (max-width: 450px) {
+  /* .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;} */
+
+  .navbar__main__container__menu{
+      display: none;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="navbar__main__container">
+    <p class="navbar__main__container__p">My Website</p> 
+    <div class="navbar__main__container__inner__div" onclick="openNav()">
+        <div class="navbar__main__container__menu">MENU  </div>
+        <div class="navbar__main__container__menu__icon" >&#9776;</div>
+    </div> 
+</div>    
+
+<div id="mySidenav" class="sidenav">
+  <span href="javascript:void(0)" class="closebtn navbar__main__container__close__btn" onclick="closeNav()">&times;</span>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</div>
+
+
+<h2>Animated Sidenav Example Full Width</h2>
+<p>Click on the element below to open the navigation menu.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nesciunt vel nihil veniam aliquam, atque necessitatibus, assumenda at vitae culpa officia facere, dignissimos blanditiis architecto cupiditate quod. Facilis ipsa velit repellat nisi delectus incidunt veritatis pariatur exercitationem illo tempora hic, facere fugit tempore aperiam maiores, non dolor harum? Reprehenderit blanditiis modi saepe ut, quidem deserunt, sunt atque exercitationem distinctio iure molestiae quia, mollitia dicta. Dolore, vitae fugiat molestiae maxime consequuntur facere pariatur earum temporibus voluptatum, doloremque, neque voluptatibus tempore debitis qui beatae? Eius dolorem nobis odit cum. Commodi debitis mollitia repellendus, illo tenetur, vel nobis iusto doloribus quisquam ipsam modi. Nisi, ut dolore sunt a debitis maxime amet animi sapiente obcaecati error qui architecto reprehenderit rem mollitia libero. Aliquid culpa quod, alias facere delectus doloremque aut beatae harum quidem, debitis vitae veniam perspiciatis. Labore eaque magni expedita quaerat ut, dolores cumque id iusto velit dicta quod in atque, molestiae fugiat?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nesciunt vel nihil veniam aliquam, atque necessitatibus, assumenda at vitae culpa officia facere, dignissimos blanditiis architecto cupiditate quod. Facilis ipsa velit repellat nisi delectus incidunt veritatis pariatur exercitationem illo tempora hic, facere fugit tempore aperiam maiores, non dolor harum? Reprehenderit blanditiis modi saepe ut, quidem deserunt, sunt atque exercitationem distinctio iure molestiae quia, mollitia dicta. Dolore, vitae fugiat molestiae maxime consequuntur facere pariatur earum temporibus voluptatum, doloremque, neque voluptatibus tempore debitis qui beatae? Eius dolorem nobis odit cum. Commodi debitis mollitia repellendus, illo tenetur, vel nobis iusto doloribus quisquam ipsam modi. Nisi, ut dolore sunt a debitis maxime amet animi sapiente obcaecati error qui architecto reprehenderit rem mollitia libero. Aliquid culpa quod, alias facere delectus doloremque aut beatae harum quidem, debitis vitae veniam perspiciatis. Labore eaque magni expedita quaerat ut, dolores cumque id iusto velit dicta quod in atque, molestiae fugiat?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nesciunt vel nihil veniam aliquam, atque necessitatibus, assumenda at vitae culpa officia facere, dignissimos blanditiis architecto cupiditate quod. Facilis ipsa velit repellat nisi delectus incidunt veritatis pariatur exercitationem illo tempora hic, facere fugit tempore aperiam maiores, non dolor harum? Reprehenderit blanditiis modi saepe ut, quidem deserunt, sunt atque exercitationem distinctio iure molestiae quia, mollitia dicta. Dolore, vitae fugiat molestiae maxime consequuntur facere pariatur earum temporibus voluptatum, doloremque, neque voluptatibus tempore debitis qui beatae? Eius dolorem nobis odit cum. Commodi debitis mollitia repellendus, illo tenetur, vel nobis iusto doloribus quisquam ipsam modi. Nisi, ut dolore sunt a debitis maxime amet animi sapiente obcaecati error qui architecto reprehenderit rem mollitia libero. Aliquid culpa quod, alias facere delectus doloremque aut beatae harum quidem, debitis vitae veniam perspiciatis. Labore eaque magni expedita quaerat ut, dolores cumque id iusto velit dicta quod in atque, molestiae fugiat?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nesciunt vel nihil veniam aliquam, atque necessitatibus, assumenda at vitae culpa officia facere, dignissimos blanditiis architecto cupiditate quod. Facilis ipsa velit repellat nisi delectus incidunt veritatis pariatur exercitationem illo tempora hic, facere fugit tempore aperiam maiores, non dolor harum? Reprehenderit blanditiis modi saepe ut, quidem deserunt, sunt atque exercitationem distinctio iure molestiae quia, mollitia dicta. Dolore, vitae fugiat molestiae maxime consequuntur facere pariatur earum temporibus voluptatum, doloremque, neque voluptatibus tempore debitis qui beatae? Eius dolorem nobis odit cum. Commodi debitis mollitia repellendus, illo tenetur, vel nobis iusto doloribus quisquam ipsam modi. Nisi, ut dolore sunt a debitis maxime amet animi sapiente obcaecati error qui architecto reprehenderit rem mollitia libero. Aliquid culpa quod, alias facere delectus doloremque aut beatae harum quidem, debitis vitae veniam perspiciatis. Labore eaque magni expedita quaerat ut, dolores cumque id iusto velit dicta quod in atque, molestiae fugiat?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nesciunt vel nihil veniam aliquam, atque necessitatibus, assumenda at vitae culpa officia facere, dignissimos blanditiis architecto cupiditate quod. Facilis ipsa velit repellat nisi delectus incidunt veritatis pariatur exercitationem illo tempora hic, facere fugit tempore aperiam maiores, non dolor harum? Reprehenderit blanditiis modi saepe ut, quidem deserunt, sunt atque exercitationem distinctio iure molestiae quia, mollitia dicta. Dolore, vitae fugiat molestiae maxime consequuntur facere pariatur earum temporibus voluptatum, doloremque, neque voluptatibus tempore debitis qui beatae? Eius dolorem nobis odit cum. Commodi debitis mollitia repellendus, illo tenetur, vel nobis iusto doloribus quisquam ipsam modi. Nisi, ut dolore sunt a debitis maxime amet animi sapiente obcaecati error qui architecto reprehenderit rem mollitia libero. Aliquid culpa quod, alias facere delectus doloremque aut beatae harum quidem, debitis vitae veniam perspiciatis. Labore eaque magni expedita quaerat ut, dolores cumque id iusto velit dicta quod in atque, molestiae fugiat?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nesciunt vel nihil veniam aliquam, atque necessitatibus, assumenda at vitae culpa officia facere, dignissimos blanditiis architecto cupiditate quod. Facilis ipsa velit repellat nisi delectus incidunt veritatis pariatur exercitationem illo tempora hic, facere fugit tempore aperiam maiores, non dolor harum? Reprehenderit blanditiis modi saepe ut, quidem deserunt, sunt atque exercitationem distinctio iure molestiae quia, mollitia dicta. Dolore, vitae fugiat molestiae maxime consequuntur facere pariatur earum temporibus voluptatum, doloremque, neque voluptatibus tempore debitis qui beatae? Eius dolorem nobis odit cum. Commodi debitis mollitia repellendus, illo tenetur, vel nobis iusto doloribus quisquam ipsam modi. Nisi, ut dolore sunt a debitis maxime amet animi sapiente obcaecati error qui architecto reprehenderit rem mollitia libero. Aliquid culpa quod, alias facere delectus doloremque aut beatae harum quidem, debitis vitae veniam perspiciatis. Labore eaque magni expedita quaerat ut, dolores cumque id iusto velit dicta quod in atque, molestiae fugiat?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nesciunt vel nihil veniam aliquam, atque necessitatibus, assumenda at vitae culpa officia facere, dignissimos blanditiis architecto cupiditate quod. Facilis ipsa velit repellat nisi delectus incidunt veritatis pariatur exercitationem illo tempora hic, facere fugit tempore aperiam maiores, non dolor harum? Reprehenderit blanditiis modi saepe ut, quidem deserunt, sunt atque exercitationem distinctio iure molestiae quia, mollitia dicta. Dolore, vitae fugiat molestiae maxime consequuntur facere pariatur earum temporibus voluptatum, doloremque, neque voluptatibus tempore debitis qui beatae? Eius dolorem nobis odit cum. Commodi debitis mollitia repellendus, illo tenetur, vel nobis iusto doloribus quisquam ipsam modi. Nisi, ut dolore sunt a debitis maxime amet animi sapiente obcaecati error qui architecto reprehenderit rem mollitia libero. Aliquid culpa quod, alias facere delectus doloremque aut beatae harum quidem, debitis vitae veniam perspiciatis. Labore eaque magni expedita quaerat ut, dolores cumque id iusto velit dicta quod in atque, molestiae fugiat?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nesciunt vel nihil veniam aliquam, atque necessitatibus, assumenda at vitae culpa officia facere, dignissimos blanditiis architecto cupiditate quod. Facilis ipsa velit repellat nisi delectus incidunt veritatis pariatur exercitationem illo tempora hic, facere fugit tempore aperiam maiores, non dolor harum? Reprehenderit blanditiis modi saepe ut, quidem deserunt, sunt atque exercitationem distinctio iure molestiae quia, mollitia dicta. Dolore, vitae fugiat molestiae maxime consequuntur facere pariatur earum temporibus voluptatum, doloremque, neque voluptatibus tempore debitis qui beatae? Eius dolorem nobis odit cum. Commodi debitis mollitia repellendus, illo tenetur, vel nobis iusto doloribus quisquam ipsam modi. Nisi, ut dolore sunt a debitis maxime amet animi sapiente obcaecati error qui architecto reprehenderit rem mollitia libero. Aliquid culpa quod, alias facere delectus doloremque aut beatae harum quidem, debitis vitae veniam perspiciatis. Labore eaque magni expedita quaerat ut, dolores cumque id iusto velit dicta quod in atque, molestiae fugiat?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nesciunt vel nihil veniam aliquam, atque necessitatibus, assumenda at vitae culpa officia facere, dignissimos blanditiis architecto cupiditate quod. Facilis ipsa velit repellat nisi delectus incidunt veritatis pariatur exercitationem illo tempora hic, facere fugit tempore aperiam maiores, non dolor harum? Reprehenderit blanditiis modi saepe ut, quidem deserunt, sunt atque exercitationem distinctio iure molestiae quia, mollitia dicta. Dolore, vitae fugiat molestiae maxime consequuntur facere pariatur earum temporibus voluptatum, doloremque, neque voluptatibus tempore debitis qui beatae? Eius dolorem nobis odit cum. Commodi debitis mollitia repellendus, illo tenetur, vel nobis iusto doloribus quisquam ipsam modi. Nisi, ut dolore sunt a debitis maxime amet animi sapiente obcaecati error qui architecto reprehenderit rem mollitia libero. Aliquid culpa quod, alias facere delectus doloremque aut beatae harum quidem, debitis vitae veniam perspiciatis. Labore eaque magni expedita quaerat ut, dolores cumque id iusto velit dicta quod in atque, molestiae fugiat?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nesciunt vel nihil veniam aliquam, atque necessitatibus, assumenda at vitae culpa officia facere, dignissimos blanditiis architecto cupiditate quod. Facilis ipsa velit repellat nisi delectus incidunt veritatis pariatur exercitationem illo tempora hic, facere fugit tempore aperiam maiores, non dolor harum? Reprehenderit blanditiis modi saepe ut, quidem deserunt, sunt atque exercitationem distinctio iure molestiae quia, mollitia dicta. Dolore, vitae fugiat molestiae maxime consequuntur facere pariatur earum temporibus voluptatum, doloremque, neque voluptatibus tempore debitis qui beatae? Eius dolorem nobis odit cum. Commodi debitis mollitia repellendus, illo tenetur, vel nobis iusto doloribus quisquam ipsam modi. Nisi, ut dolore sunt a debitis maxime amet animi sapiente obcaecati error qui architecto reprehenderit rem mollitia libero. Aliquid culpa quod, alias facere delectus doloremque aut beatae harum quidem, debitis vitae veniam perspiciatis. Labore eaque magni expedita quaerat ut, dolores cumque id iusto velit dicta quod in atque, molestiae fugiat?</p>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+   
+</body>
+</html> 
